@@ -22,7 +22,7 @@ moveShelf=(theBook, theShelf)=>{
     // set shelf
     theBook.shelf = theShelf
     // filter books if id are the same
-    var filteredBooks = this.state.books.filter( book => book.id !== theBook.id )
+    let filteredBooks = this.state.books.filter( book => book.id !== theBook.id )
     // push books to an array
     filteredBooks.push(theBook);
     this.setState({ books: filteredBooks })

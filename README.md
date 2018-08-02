@@ -1,5 +1,4 @@
 # MyReads: A Book Lending App
----
 This is a React app, created by Liene Tunne as part of Udacity Nanodegree "FEND".
 
 ## Features

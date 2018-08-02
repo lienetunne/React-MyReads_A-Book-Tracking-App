@@ -13,13 +13,13 @@ class BookSearch extends Component{
   }
 
   updateQuery=(query)=>{
-    this.setState({query: query.trim()})
+    this.setState({query: query})
     this.getSearchedBooks(query);
   }
 
   getSearchedBooks=(query)=>{
     // if someone searches a book
-    if(query){
+    if(query.trim()){
       BooksAPI.search(query).then((theBook)=>{
         // if there is an error => show no book but show error message
         if(theBook.error){
@@ -65,7 +65,7 @@ class BookSearch extends Component{
           }
           {this.state.hasError && (
             <div>
-             <h2>Theres no books for <i>"{this.state.query}"</i>, please try again later!</h2>
+             <h2>Theres no books for <i>"{this.state.query}"</i>, please try again!</h2>
              <h4><img src={sadFace}  alt="sadFace" url="https://icons8.com/"/></h4>
             </div>
           )}
